@@ -1,0 +1,55 @@
+/*Desenvolvendo um algoritmo para a compra de bilhetes de transportes
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ */
+
+package com.mycompany.bilhetetransporte;
+
+/**
+ *
+ * @author Heloisa Silva 1 DS/AMS
+ */
+import java.util.Scanner;
+
+public class BilheteTransporte {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Escolha o tipo de transporte:");
+        System.out.println("1 - Ônibus urbano");
+        System.out.println("2 - Metrô");
+        System.out.println("3 - Trem intermunicipal");
+        System.out.println("4 - Ônibus rodoviário");
+        System.out.print("Digite a opção desejada: ");
+        int opcao = scanner.nextInt();
+
+        System.out.print("Digite a quantidade de bilhetes: ");
+        int quantidade = scanner.nextInt();
+
+        double valorTotal = 0;
+        boolean valido = true;
+
+        switch (opcao) {
+            case 1:
+                valorTotal = quantidade * 4.40;
+                break;
+            case 2:
+                valorTotal = quantidade * 5.00;
+                break;
+            case 3:
+                valorTotal = quantidade * 8.50;
+                break;
+            case 4:
+                valorTotal = quantidade * 12.00;
+                break;
+            default:
+                valido = false;
+                System.out.println("Erro: opção inválida!");
+        }
+
+        if (valido) {
+            System.out.printf("Valor total da compra: R$ %.2f%n", valorTotal);
+        }
+
+        scanner.close();
+    }
+}

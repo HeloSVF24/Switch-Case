@@ -1,0 +1,46 @@
+/*Digite um nÃºmero e aparecerÃ¡ um jogo
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ */
+
+package com.mycompany.jogofavorito;
+
+/**
+ *
+ * @author Heloisa Silva 1 DS/AMS
+ */
+
+import java.util.Scanner;
+
+public class JogoFavorito {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Solicite ao usuÃ¡rio que digite um nÃºmero
+        System.out.print("Digite um nÃºmero de 1 a 5: ");
+        int numero = scanner.nextInt();
+
+        // Estrutura switch para verificar o nÃºmero
+        switch (numero) {
+            case 1:
+                System.out.println("Minecraft");
+                break;
+            case 2:
+                System.out.println("Fortnite");
+                break;
+            case 3:
+                System.out.println("Gacha Club");
+                break;
+            case 4:
+                System.out.println("Twisted Wondeland");
+                break;
+            case 5:
+                System.out.println("Barbie");
+                break;
+            default:
+                System.out.println("Jogo nÃ£o encontrado");
+        }
+
+        scanner.close();
+    }
+}
+

@@ -1,0 +1,40 @@
+/*Usando o Switch Case para escolher uma fruta
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ */
+
+package com.mycompany.fruta;
+
+/**
+ *
+ * @author Heloisa Silva 1 DS/AMS
+ */
+
+import java.util.Scanner;
+
+public class Fruta {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Solicita ao usuário que digite um número
+        System.out.print("Digite um número de 1 a 3: ");
+        int numero = scanner.nextInt();
+
+        // Estrutura switch para verificar o número
+        switch (numero) {
+            case 1:
+                System.out.println("Amora");
+                break;
+            case 2:
+                System.out.println("Pêssego");
+                break;
+            case 3:
+                System.out.println("Melancia");
+                break;
+            default:
+                System.out.println("Fruta inválida");
+        }
+
+        scanner.close();
+    }
+}
+

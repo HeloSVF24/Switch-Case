@@ -1,0 +1,56 @@
+/*Algoritmo para classificar a sua idade em uma faixa etária
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ */
+
+package com.mycompany.faixaetaria;
+
+/**
+ *
+ * @author Heloisa Silva 1 DS/AMS
+ */
+import java.util.Scanner;
+
+public class FaixaEtaria {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Digite sua idade: ");
+        int idade = scanner.nextInt();
+
+        int codigoFaixa;
+
+        // Descobrindo o código com if
+        if (idade >= 0 && idade <= 12) {
+            codigoFaixa = 1;
+        } else if (idade >= 13 && idade <= 17) {
+            codigoFaixa = 2;
+        } else if (idade >= 18 && idade <= 59) {
+            codigoFaixa = 3;
+        } else if (idade >= 60) {
+            codigoFaixa = 4;
+        } else {
+            codigoFaixa = -1; // idade inválida
+        }
+
+        // Imprimindo a faixa com switch
+        switch (codigoFaixa) {
+            case 1:
+                System.out.println("Faixa etária: Criança (0–12 anos).");
+                break;
+            case 2:
+                System.out.println("Faixa etária: Adolescente (13–17 anos).");
+                break;
+            case 3:
+                System.out.println("Faixa etária: Adulto (18–59 anos).");
+                break;
+            case 4:
+                System.out.println("Faixa etária: Idoso (60+ anos).");
+                break;
+            default:
+                System.out.println("Idade inválida!");
+        }
+
+        scanner.close();
+    }
+}
+
